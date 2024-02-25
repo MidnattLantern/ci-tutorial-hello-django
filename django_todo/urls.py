@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from todo.views import say_hello
-from goatapp.views import say_goaty
+from todo.views import get_todo_list, home
+from goatapp.views import say_goaty, say_goaty2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', say_hello, name='hello'),
-    path('goaty/', say_goaty, name='goaty')
+    path('', get_todo_list, name='get_todo_list'),
+    path('goaty/', say_goaty, name='goaty'),
+    path('home/', home, name='home'),
+    path('goaty2/', say_goaty2, name='goaty2'),
 ]

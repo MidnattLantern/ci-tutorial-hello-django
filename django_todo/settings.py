@@ -28,7 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+""" Installed apps:
+todo
+goatapp
+"""
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'todo',
+    'goatapp',
 ]
 
 MIDDLEWARE = [
