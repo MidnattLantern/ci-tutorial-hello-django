@@ -45,3 +45,15 @@ is used to return the name of an object, rather than "Item object (indx)"
 Flake8
 ---
 - Python standard checking using Flake8
+
+csrf token
+---
+- for each submit or form in Django, add this for security
+`{% csrf_token %}`
+
+
+Tangle
+===
+add/add/
+---
+- The allowed hosts list was empty, but Django allowed rendering trough VS Code via Gitpod with limited functionality. When adding allowed hosts, this problem was solved.
