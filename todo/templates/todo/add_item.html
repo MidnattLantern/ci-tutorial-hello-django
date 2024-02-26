@@ -7,7 +7,9 @@
         <h1>Add a todo item</h1>
         <form method="POST" action="add">
             {% csrf_token %}
+            {{ form }}
 
+            <!-- Manual frontend, not recomended
             <div>
                 <p>
                     <label for="id_name">Name: </label>
@@ -20,6 +22,7 @@
                     <input type="checkbox" id="id_done" name="done"/>
                 </p>
             </div>
+        -->
             <div>
                 <p>
                     <button type="submit">Add Item</button>
