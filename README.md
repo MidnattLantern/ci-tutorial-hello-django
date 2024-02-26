@@ -14,7 +14,34 @@ Django project:
 `django-admin startproject django_todo .`
 - The dot install the project at the current (root) directory
 
-DJango app:
+Django app:
 ---
 - In terminal:
 ´python3 manage.py startapp todo´
+- Apps can function without being added to installed apps, but with limited functionality:
+Unable to render html templates
+
+
+Etc
+===
+
+Migrations:
+---
+`python3 manage.py makemigrations --dry-run`
+`python3 manage.py showmigrations`
+`python3 manage.py makemigrations`
+`python3 manage.py migrate --plan`
+`python3 manage.py migrate`
+
+Show item name
+---
+The following code:
+`
+    def __str__(self):
+        return self.name
+`
+is used to return the name of an object, rather than "Item object (indx)"
+
+Flake8
+---
+- Python standard checking using Flake8
