@@ -13,6 +13,11 @@
                     {% else %}
                         <td>{{ item.name }}</td>
                     {% endif %}
+                    <td>
+                        <a href="/edit/{{ item.id }}">
+                            <button>edit</button>
+                        </a>
+                    </td>
                 </tr>
                 <!-- empty is a special tag to be used before endfor -->
                 {% empty %}
