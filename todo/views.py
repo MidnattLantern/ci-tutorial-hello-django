@@ -38,6 +38,19 @@ def edit_item(request, item_id):
     return render(request, 'todo/edit_item.html', context)
 
 
+def toggle_item(request, item_id):
+    item = get_object_or_404(Item, id=item_id)
+    item.done = not item.done
+    item.save()
+    return redirect('get_todo_list')
+
+
+def delete_item(request, item_id):
+    item = get_object_or_404(Item, id=item_id)
+    item.delete()
+    return redirect('get_todo_list')
+
+
 def home(request):
     html_content = "<h1>Hello</h1><p>This is an HTML response.</p>"
     html_content2 = "<p>Home page</p>"
